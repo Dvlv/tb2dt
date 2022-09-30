@@ -11,7 +11,9 @@ print(f"Looking for {filepath}")
 
 found = exists(filepath)
 while not found:
-    print("File not found, please choose from the following (leave off the .desktop extension): \n")
+    print(
+        "File not found, please choose from the following (leave off the .desktop extension): \n"
+    )
     print(os.listdir("/usr/share/applications"))
 
     app = input("Application name: ")
@@ -35,4 +37,3 @@ if found:
 
     with open(newpath, "w") as f:
         f.writelines(content)
-
